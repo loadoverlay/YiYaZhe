@@ -19,6 +19,12 @@
         <item name="android:windowNoTitle">true</item>
     </style>
 
+    <style name="top_category_scroll_view_item_text">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+    </style>
+
     <style name="title_bar_style">
         <item name="android:background">@drawable/bg_titlebar</item>
         <item name="android:layout_width">fill_parent</item>

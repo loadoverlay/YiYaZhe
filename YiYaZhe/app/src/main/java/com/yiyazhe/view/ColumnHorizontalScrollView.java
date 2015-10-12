@@ -7,11 +7,14 @@ import android.view.View;
 import android.widget.HorizontalScrollView;
 import android.widget.ImageView;
 
+
+/**
+ * Author：JiangChu
+ * Date：2015/10/11
+ */
 public class ColumnHorizontalScrollView extends HorizontalScrollView {
 	/** 传入整体布局  */
 	private View ll_content;
-	/** 传入更多栏目选择布局 */
-	private View ll_more;
 	/** 传入拖动栏布局 */
 	private View rl_column;
 	/** 左阴影图片 */
@@ -43,7 +46,7 @@ public class ColumnHorizontalScrollView extends HorizontalScrollView {
 		// TODO Auto-generated method stub
 		super.onScrollChanged(paramInt1, paramInt2, paramInt3, paramInt4);
 		shade_ShowOrHide();
-		if(!activity.isFinishing() && ll_content !=null && leftImage!=null && rightImage!=null && ll_more!=null && rl_column !=null){
+		if(!activity.isFinishing() && ll_content !=null && leftImage!=null && rightImage!=null && rl_column !=null){
 			if(ll_content.getWidth() <= mScreenWitdh){
 				leftImage.setVisibility(View.GONE);
 				rightImage.setVisibility(View.GONE);
@@ -56,7 +59,7 @@ public class ColumnHorizontalScrollView extends HorizontalScrollView {
 			rightImage.setVisibility(View.VISIBLE);
 			return;
 		}
-		if(ll_content.getWidth() - paramInt1 + ll_more.getWidth() + rl_column.getLeft() == mScreenWitdh){
+		if(ll_content.getWidth() - paramInt1 + rl_column.getLeft() == mScreenWitdh){
 			leftImage.setVisibility(View.VISIBLE);
 			rightImage.setVisibility(View.GONE);
 			return;
@@ -67,14 +70,13 @@ public class ColumnHorizontalScrollView extends HorizontalScrollView {
 	/** 
 	 * 传入父类布局中的资源文件
 	 * */
-	public void setParam(Activity activity, int mScreenWitdh,View paramView1,ImageView paramView2, ImageView paramView3 ,View paramView4,View paramView5){
+	public void setParam(Activity activity, int mScreenWitdh,View paramView1,ImageView paramView2, ImageView paramView3, View paramView4){
 		this.activity = activity;
 		this.mScreenWitdh = mScreenWitdh;
 		ll_content = paramView1;
 		leftImage = paramView2;
 		rightImage = paramView3;
-		ll_more = paramView4;
-		rl_column = paramView5;
+		rl_column = paramView4;
 	}
 	/** 
 	 * 判断左右阴影的显示隐藏效果
