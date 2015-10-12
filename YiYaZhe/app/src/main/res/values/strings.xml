@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">咿呀折</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- SlidingMenu -->
+    <string name="left_drawer_no_login_tip">登录后，将推荐给你更多感兴趣的文章</string>
+    <string name="left_drawer_item_setting">设置</string>
+
+    <string name="drawer_right_tip_no_login">未登录</string>
+    <string name="drawer_right_logout_hint_text">"登录后 可关注好友评论和收藏"</string>
+</resources>
